@@ -34,66 +34,50 @@ No installation required! This is a static website that can be deployed directly
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ghonapara-islami-samaz.git
+   git clone https://github.com/ProgrammerShahJalal/giskp.git
    Open index.html in any modern web browser.
    ```
 
-Usage
+## Usage
+
 Simply navigate through the website sections using the menu or by scrolling. All interactive elements have visual feedback.
 
-Customization
-To customize the website:
+## Customization
 
-Content: Edit the HTML files directly to update text content
+**To customize the website:**
 
-Images: Replace placeholder images in the images/ folder
+- Content: Edit the HTML files directly to update text content
 
-Colors: Modify the CSS variables in the :root selector
+- Images: Replace placeholder images in the images/ folder
 
-Lottie Animation: Change the animation path in the JavaScript
+- Colors: Modify the CSS variables in the :root selector
 
-Dependencies
-Font Awesome - For icons
+- Lottie Animation: Change the animation path in the JavaScript
 
-LottieFiles - For animations
+## Dependencies
 
-Google Fonts - For typography
+- Font Awesome - For icons
 
-Deployment
+- LottieFiles - For animations
+
+- Google Fonts - For typography
+
+## Deployment
+
 The website can be deployed to any static hosting service:
 
-GitHub Pages
+- GitHub Pages
 
-Netlify
+- Netlify
 
-Vercel
+- Vercel
 
-Firebase Hosting
+- Firebase Hosting
 
-Traditional web hosting (via FTP)
+- Traditional web hosting (via FTP)
 
-Project Structure
-Copy
-ghonapara-islami-samaz/
-├── index.html # Main website file
-├── images/ # All website images
-├── scripts/ # JavaScript files
-├── styles/ # CSS files
-└── README.md # This documentation
-Contributing
-Contributions are welcome! Please follow these steps:
+## License
 
-Fork the project
-
-Create your feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some amazing feature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-License
 This project is licensed under the MIT License.
 
-All rights reserved by Md Shah Jalal.
+_All rights reserved by Md Shah Jalal._
