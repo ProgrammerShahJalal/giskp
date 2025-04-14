@@ -318,3 +318,26 @@ document.querySelectorAll(".video-card").forEach((card) => {
 // Run on load and scroll
 window.addEventListener("load", animateVideoCards);
 window.addEventListener("scroll", animateVideoCards);
+
+// Show/hide button based on scroll position
+window.onscroll = function () {
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    scrollBtn.style.display = "flex";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+};
+
+// Smooth scroll to top
+document
+  .getElementById("scrollToTopBtn")
+  .addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
