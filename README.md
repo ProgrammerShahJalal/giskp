@@ -1,6 +1,6 @@
 # Ghonapara Islami Samaz Kallan Parishad - Official Website
 
-![Website Preview](https://i.ibb.co.com/JFk9rnrK/Ghonapara-Islami-Samaz-Kallan-Parishad-Serving-the-Community.png)
+![Website Preview](https://i.ibb.co.com/zTM6F0hM/websitepreview-1.png)
 
 A modern, responsive website for Ghonapara Islami Samaz Kallan Parishad - a non-political, non-profit voluntary organization serving the community since 1995.
 
