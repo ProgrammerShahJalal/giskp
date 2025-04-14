@@ -287,6 +287,15 @@ body {
   display: block;
 }
 
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.no-bullets li {
+  margin-bottom: 0.5rem;
+}
+
 /* Works Section */
 .works {
   background-color: #f1f1f1;
