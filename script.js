@@ -26,6 +26,30 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const backgrounds = document.querySelectorAll(".hero-bg");
+  let current = 0;
+
+  // Preload all images
+  backgrounds.forEach((bg) => {
+    const img = new Image();
+    img.src = bg.style.backgroundImage.replace(/url\(['"]?(.*?)['"]?\)/, "$1");
+  });
+
+  function changeBackground() {
+    // Remove active class from current background
+    backgrounds[current].classList.remove("active");
+
+    // Move to next background (loop to start if needed)
+    current = (current + 1) % backgrounds.length;
+
+    // Add active class to new background
+    backgrounds[current].classList.add("active");
+  }
+
+  // Change background every 5 seconds (adjust as needed)
+  setInterval(changeBackground, 5000);
+});
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -221,3 +245,76 @@ document.getElementById("lottie-contact").style.transition =
 // Run on load and scroll
 window.addEventListener("load", animateContactSection);
 window.addEventListener("scroll", animateContactSection);
+
+// Click handler for video thumbnails
+document.querySelectorAll(".video-wrapper").forEach((wrapper) => {
+  wrapper.addEventListener("click", function () {
+    const thumbnail = this.querySelector(".video-thumbnail");
+    const playButton = this.querySelector(".play-button");
+    const iframe = this.querySelector(".video-iframe");
+
+    // Hide thumbnail and play button
+    thumbnail.style.display = "none";
+    playButton.style.display = "none";
+
+    // Show and load iframe
+    iframe.style.display = "block";
+    iframe.src = iframe.dataset.src;
+
+    // Add a small class to the card for visual feedback
+    this.parentElement.classList.add("video-playing");
+  });
+});
+
+// Hover effects for play button
+document.querySelectorAll(".video-wrapper").forEach((wrapper) => {
+  wrapper.addEventListener("mouseenter", function () {
+    this.querySelector(".play-button").style.transform =
+      "translate(-50%, -50%) scale(1.1)";
+    this.querySelector(".play-button").style.backgroundColor =
+      "rgba(255,255,255,0.9)";
+  });
+  wrapper.addEventListener("mouseleave", function () {
+    this.querySelector(".play-button").style.transform =
+      "translate(-50%, -50%) scale(1)";
+    this.querySelector(".play-button").style.backgroundColor =
+      "rgba(255,255,255,0.8)";
+  });
+});
+// Animate video cards on scroll
+const animateVideoCards = () => {
+  const videoCards = document.querySelectorAll(".video-card");
+  const section = document.querySelector(".video-gallery");
+
+  if (section.getBoundingClientRect().top < window.innerHeight - 100) {
+    videoCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.style.opacity = "1";
+        card.style.transform = "translateY(0)";
+      }, index * 200);
+    });
+  }
+};
+
+// Set initial state
+document.querySelectorAll(".video-card").forEach((card) => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(30px)";
+  card.style.transition = "all 0.5s ease";
+});
+
+// Add hover effect
+document.querySelectorAll(".video-card").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.style.transform = "translateY(-10px)";
+    card.style.boxShadow = "0 15px 30px rgba(0,0,0,0.15)";
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "translateY(0)";
+    card.style.boxShadow = "0 5px 15px rgba(0,0,0,0.1)";
+  });
+});
+
+// Run on load and scroll
+window.addEventListener("load", animateVideoCards);
+window.addEventListener("scroll", animateVideoCards);

@@ -113,21 +113,51 @@ body {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://i.ibb.co.com/Cpvmpkzx/bg1.png") no-repeat center center/cover;
   color: white;
   display: flex;
   align-items: center;
   text-align: center;
   padding: 0 2rem;
   position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.hero-bg.active {
+  opacity: 1;
 }
 
 .hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
+  z-index: 2;
   width: 100%;
-  animation: fadeInUp 1s ease;
+}
+
+#scrollDown {
+  z-index: 9;
 }
 
 .hero h1 {
@@ -367,6 +397,10 @@ body {
 
 .gallery-item:hover .gallery-overlay {
   opacity: 1;
+}
+.video-playing {
+  box-shadow: 0 10px 25px rgba(42, 157, 143, 0.3) !important;
+  transform: translateY(-5px) !important;
 }
 
 /* Contact */

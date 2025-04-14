@@ -37,9 +37,31 @@
         </ul>
       </div>
     </nav>
+    <div class="hero">
+      <!-- Background Images -->
+      <div
+        class="hero-bg active"
+        style="
+          background-image: url('https://i.ibb.co.com/ccDRHbHY/beautiful-bg.png');
+        "
+      ></div>
+      <div
+        class="hero-bg"
+        style="
+          background-image: url('https://i.ibb.co.com/whWdJSbS/bg2.png');
+        "
+      ></div>
+      <div
+        class="hero-bg"
+        style="
+          background-image: url('https://i.ibb.co.com/HTs4CBP9/annual-tour.png');
+        "
+      ></div>
+      <div
+        class="hero-bg"
+        style="background-image: url('https://i.ibb.co.com/Cpvmpkzx/bg1.png')"
+      ></div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
       <div class="hero-content">
         <h1>Ghonapara Islami Samaz Kallan Parishad</h1>
         <p>
@@ -55,7 +77,7 @@
       <div class="scroll-down" id="scrollDown">
         <i class="fas fa-chevron-down"></i>
       </div>
-    </section>
+    </div>
 
     <!-- About Section -->
     <section class="section" id="about">
@@ -129,7 +151,7 @@
         </div>
         <div class="about-image">
           <img
-            src="https://i.ibb.co.com/whWdJSbS/bg2.png"
+            src="https://img.freepik.com/premium-photo/create-image-philanthropist-distributing-gifts-resources-those-need_950002-361754.jpg?w=1060"
             alt="Community Service"
           />
         </div>
@@ -832,61 +854,324 @@
       </div>
     </section>
 
-    <!-- Works Section -->
-    <section class="section works" id="works">
+    <!-- Video Gallery Section with Custom Thumbnails -->
+    <section
+      class="section video-gallery"
+      id="works"
+      style="background-color: var(--light); padding: 6rem 2rem"
+    >
       <div class="section-title">
-        <h2>Our Activities</h2>
+        <h2>Our Video Gallery</h2>
+        <p
+          style="
+            text-align: center;
+            max-width: 800px;
+            margin: 1rem auto 3rem;
+            color: #555;
+          "
+        >
+          Watch our latest activities and events in action
+        </p>
       </div>
-      <div class="works-grid">
-        <div class="work-card">
-          <div class="work-image">
+
+      <div
+        class="video-container"
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          padding: 0 1rem;
+        "
+      >
+        <!-- Video 1 -->
+        <div
+          class="video-card"
+          style="
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          "
+        >
+          <div
+            class="video-wrapper"
+            style="
+              position: relative;
+              padding-bottom: 56.25%;
+              height: 0;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <!-- Thumbnail Image -->
             <img
-              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Religious Education"
+              src="https://i.ibb.co.com/kgtsFWX1/Whats-App-Image-2025-04-12-at-9-43-41-PM.jpg"
+              alt="Eid reunion thumbnail"
+              class="video-thumbnail"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
             />
+
+            <!-- Play Button Overlay -->
+            <div
+              class="play-button"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+              "
+            >
+              <i
+                class="fas fa-play"
+                style="color: var(--primary); font-size: 24px; margin-left: 5px"
+              ></i>
+            </div>
+
+            <!-- Hidden iframe -->
+            <iframe
+              class="video-iframe"
+              data-src="https://www.youtube.com/embed/x1vTA5rCyGg?autoplay=1"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                display: none;
+              "
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
           </div>
-          <div class="work-info">
-            <h3>Religious Education</h3>
-            <p>
-              We provide comprehensive Islamic education for children and
-              adults, including Quran classes, Hadith studies, and Islamic
-              history to nurture spiritual growth.
+          <div class="video-info" style="padding: 1.5rem">
+            <h3 style="color: var(--secondary); margin-bottom: 0.5rem">
+              Eid reunion and worker gathering
+            </h3>
+            <p style="color: #666; line-height: 1.6">
+              Adviser of Ghonapara Islami Samaj Kalyan Parishad, Dr. Abdul
+              Momin, is speaking at the Eid reunion and worker gathering.
             </p>
           </div>
         </div>
-        <div class="work-card">
-          <div class="work-image">
+
+        <!-- Video 2 -->
+        <div
+          class="video-card"
+          style="
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          "
+        >
+          <div
+            class="video-wrapper"
+            style="
+              position: relative;
+              padding-bottom: 56.25%;
+              height: 0;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <!-- Thumbnail Image -->
             <img
-              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
-              alt="Charity Work"
+              src="https://i.ibb.co.com/BH2vqGh8/63a9fac6-5d52-407a-b926-7973cfee2291.jpg"
+              alt="Ramadan Iftar thumbnail"
+              class="video-thumbnail"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
             />
+
+            <!-- Play Button Overlay -->
+            <div
+              class="play-button"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+              "
+            >
+              <i
+                class="fas fa-play"
+                style="color: var(--primary); font-size: 24px; margin-left: 5px"
+              ></i>
+            </div>
+
+            <!-- Hidden iframe -->
+            <iframe
+              class="video-iframe"
+              data-src="https://www.youtube.com/embed/t_ZG18OSub4?autoplay=1"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                display: none;
+              "
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
           </div>
-          <div class="work-info">
-            <h3>Charity & Zakat Distribution</h3>
-            <p>
-              Our charity programs provide essential support to underprivileged
-              families through food distribution, financial aid, and emergency
-              relief services.
+          <div class="video-info" style="padding: 1.5rem">
+            <h3 style="color: var(--secondary); margin-bottom: 0.5rem">
+              Ramadan Iftar 2025
+            </h3>
+            <p style="color: #666; line-height: 1.6">
+              Iftar distribution during the holy month of Ramadan
             </p>
           </div>
         </div>
-        <div class="work-card">
-          <div class="work-image">
+
+        <!-- Video 3 -->
+        <div
+          class="video-card"
+          style="
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+          "
+        >
+          <div
+            class="video-wrapper"
+            style="
+              position: relative;
+              padding-bottom: 56.25%;
+              height: 0;
+              overflow: hidden;
+              cursor: pointer;
+            "
+          >
+            <!-- Thumbnail Image -->
             <img
-              src="https://images.unsplash.com/photo-1524179091875-bf99a9a6af57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-              alt="Youth Development"
+              src="https://i.ibb.co.com/HTs4CBP9/annual-tour.png"
+              alt="Annual Tour thumbnail"
+              class="video-thumbnail"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              "
             />
+
+            <!-- Play Button Overlay -->
+            <div
+              class="play-button"
+              style="
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 70px;
+                height: 70px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+              "
+            >
+              <i
+                class="fas fa-play"
+                style="color: var(--primary); font-size: 24px; margin-left: 5px"
+              ></i>
+            </div>
+
+            <!-- Hidden iframe -->
+            <iframe
+              class="video-iframe"
+              data-src="https://www.youtube.com/embed/F5sE8GbwIuY?autoplay=1"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                display: none;
+              "
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
           </div>
-          <div class="work-info">
-            <h3>Youth Development</h3>
-            <p>
-              We empower young Muslims through leadership programs, skill
-              development workshops, and mentoring to become positive
-              contributors to society.
+          <div class="video-info" style="padding: 1.5rem">
+            <h3 style="color: var(--secondary); margin-bottom: 0.5rem">
+              Annual Tour
+            </h3>
+            <p style="color: #666; line-height: 1.6">
+              Annual Tour organized by Ghonapara Islami Samaj Kalyan Parishad
             </p>
           </div>
         </div>
       </div>
+
+      <!-- <div style="text-align: center; margin-top: 3rem">
+        <a
+          href="#"
+          class="btn"
+          style="
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+          "
+          onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+        >
+          View More Videos
+          <i class="fas fa-arrow-right" style="margin-left: 8px"></i>
+        </a>
+      </div> -->
     </section>
 
     <!-- Gallery Section -->
